@@ -40,7 +40,7 @@ class UserRepository {
                             id: results[0].user_id,
                             email: results[0].email
                         }, process.env.SECRET, { expiresIn: '1d' });
-                        return response.status(400).json({ token: token, message: 'Autenticado com sucesso' });
+                        return response.status(200).json({ token: token, message: 'Autenticado com sucesso' });
                     }
                 });
             });
